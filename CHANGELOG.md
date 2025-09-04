@@ -4,6 +4,47 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+### Security
+- Update Commons Fileupload version to **1.6.0** to fix **security vulnerability CVE-2025-48976**
+  Detail: https://cwe.mitre.org/data/definitions/770.html
+- Update activemq-client version to **5.16.7** to fix **security vulnerability CVE-2023-46604**
+  Detail: https://cwe.mitre.org/data/definitions/502.html
+- Update org.hsqldb version to **2.7.1** to fix **security vulnerability CVE-2022-41853**
+  Detail: https://cwe.mitre.org/data/definitions/470.html
+- Update Quartz-Scheduler version to **2.3.2** to fix **security vulnerability CVE-2019-13990**
+  Detail: https://cwe.mitre.org/data/definitions/611.html
+- Update ActiveMQ-Client version to **5.16.8** to fix **security vulnerability CVE-2025-27533**
+  Detail: https://cwe.mitre.org/data/definitions/789.html
+- Update elasticsearch version to **7.17.23** to fix **security vulnerability CVE-2024-23444**
+  Detail: https://cwe.mitre.org/data/definitions/311.html
+- Update elasticsearch version to **7.17.21** to fix **security vulnerability CVE-2024-43709**
+  Detail: https://cwe.mitre.org/data/definitions/770.html
+- Update json-smart version to **2.4.9** to fix **security vulnerability CVE-2023-1370**
+  Detail: https://cwe.mitre.org/data/definitions/674.html
+- Update gson to **2.8.9** to fix **security vulnerability CVE-2022-25647**
+  Detail: https://cwe.mitre.org/data/definitions/502.html
+- Update jberet-core to **2.2.1.Final** to fix **security vulnerability CVE-2024-1102**
+  Detail: https://cwe.mitre.org/data/definitions/532
+- Update commons.compress to **1.26.0** to fix **security vulnerability CVE-2024-26308**
+  Detail: https://cwe.mitre.org/data/definitions/770.html
+- Update drools-core to **7.69.0.Final** to fix **security vulnerability CVE-2022-1415**
+  Detail: https://cwe.mitre.org/data/definitions/502.html
+- Update commons-net to **3.9.0** to fix **security vulnerability CVE-2021-37533**
+  Detail: https://cwe.mitre.org/data/definitions/20.html
+- Update jetbrains.kotlin to **1.6.0** to fix **security vulnerability CVE-2022-24329**
+  Detail: https://cwe.mitre.org/data/definitions/667.html
+- Update xmlunit to **2.10.0** to fix **security vulnerability CVE-2024-31573**
+  Detail: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-31573
+
+## [17.103.1] - 2025-07-13
+### Changed
+- Update maven-common-bom to 17.103.1 in order to:
+  - Bumped h2.version to 2.3.232
+  
+## [17.103.0] - 2025-05-29
+### Changed
+- Update maven-common-bom to 17.103.0 in order to:
+  - Add dependencies for Micometer Metrics 1.15.0
 
 ## [17.102.2] - 2025-03-28
 ### Changed

@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>common-bom</artifactId>
-    <version>17.102.3-SNAPSHOT</version>
+    <version>17.103.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>CPP Common BOM</name>
     <description>Common bill of materials defining standard versions for dependencies</description>
@@ -29,20 +29,20 @@
             Version of the common bom file of the framework code.
             Imported here to avoid duplication of library versions
             File can be found here:
-            https://github.com/CJSCommonPlatform/maven-common-bom
+            https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>17.102.0</framework-comon-bom.version>
+        <framework-comon-bom.version>17.104.0-M1</framework-comon-bom.version>
         <docmosis.repackaging.version>17.10.2</docmosis.repackaging.version>
 
         <weld-ee-version>1.0.0.CR8</weld-ee-version>
         <weld-core-version>1.1.8.Final</weld-core-version>
-        <commons.compress.version>1.21</commons.compress.version>
+        <commons.compress.version>1.26.0</commons.compress.version>
         <commons.csv.version>1.4</commons.csv.version>
         <commons-dbutils.version>1.7</commons-dbutils.version>
         <commons.digester.version>1.8.1</commons.digester.version>
         <commons.discovery.version>0.5</commons.discovery.version>
-        <commons.fileupload.version>1.3.3</commons.fileupload.version>
-        <commons.net.version>3.5</commons.net.version>
+        <commons.fileupload.version>1.6.0</commons.fileupload.version>
+        <commons.net.version>3.9.0</commons.net.version>
         <commons-pool2.version>2.9.0</commons-pool2.version>
         <commons.text.version>1.10.0</commons.text.version>
 
@@ -60,7 +60,7 @@
         <netty.version>4.1.77.Final</netty.version>
         <tomcat.version>8.0.21</tomcat.version>
         <camel.version>2.16.1</camel.version>
-        <gson.version>2.3.1</gson.version>
+        <gson.version>2.8.9</gson.version>
         <c3p0.version>4.1.6.Final</c3p0.version>
         <selenium.version>2.46.0</selenium.version>
         <aspectj.version>1.7.3</aspectj.version>
@@ -72,21 +72,21 @@
         <greenmail.version>1.6.5</greenmail.version>
         <org.everit.json.schema.version>1.3.0</org.everit.json.schema.version>
         <guava.version>32.1.3-jre</guava.version>
-        <activemq-client.version>5.16.0</activemq-client.version>
+        <activemq-client.version>5.16.8</activemq-client.version>
         <maven.cucumber.reporting.plugin.version>2.0.0</maven.cucumber.reporting.plugin.version>
 
         <!-- JBoss dependency versions -->
         <version.jboss.spec.javaee.7.0>1.0.0.Final</version.jboss.spec.javaee.7.0>
 
-        <drools.version>7.60.0.Final</drools.version>
+        <drools.version>7.69.0.Final</drools.version>
         <mvel2.version>2.4.13.Final</mvel2.version>
-        <quartz.version>2.2.1</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <mockftp.version>2.6</mockftp.version>
         <bean.matchers.version>0.10</bean.matchers.version>
         <docmosis.version>4.7.1</docmosis.version>
         <apache.pdfbox.version>2.0.24</apache.pdfbox.version>
         <org.xmlunit.version>2.6.3</org.xmlunit.version>
-        <elasticsearch.version>7.16.2</elasticsearch.version>
+        <elasticsearch.version>7.17.23</elasticsearch.version>
         <jaxb-runtime.version>2.3.1</jaxb-runtime.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
 
@@ -119,24 +119,24 @@
         <jboss.resteasy.version>4.3.0.Final</jboss.resteasy.version>
         <jaxws.api.version>2.3.1</jaxws.api.version>
         <jaxws.rt.version>2.3.4</jaxws.rt.version>
-        <jberet.version>1.3.6.Final</jberet.version>
+        <jberet.version>2.2.1.Final</jberet.version>
         <jbossws.cxf.client.version>6.1.0.Final</jbossws.cxf.client.version>
         <jedis-mock.version>0.1.16</jedis-mock.version>
         <joda-time.version>2.10</joda-time.version>
         <json.version>2.12.3</json.version>
-        <json-smart.version>2.2.1</json-smart.version>
+        <json-smart.version>2.4.9</json-smart.version>
         <jsr181-api.version>1.0-MR1</jsr181-api.version>
         <junit-toolbox.version>2.4</junit-toolbox.version>
-        <kotlin.version>1.5.0</kotlin.version>
+        <kotlin.version>1.6.0</kotlin.version>
         <lombok.version>1.18.26</lombok.version>
-        <org.hsqldb.version>2.3.2</org.hsqldb.version>
+        <org.hsqldb.version>2.7.1</org.hsqldb.version>
         <poi.ooxml.version>5.2.2</poi.ooxml.version>
         <random-beans.version>3.7.0</random-beans.version>
         <rest.assured.version>4.4.0</rest.assured.version>
         <retry4j.version>0.7.1</retry4j.version>
         <sardine.version>5.7</sardine.version>
         <system.enterprise-id.version>0.0.3</system.enterprise-id.version>
-        <xmlunit.version>2.9.0</xmlunit.version>
+        <xmlunit.version>2.10.0</xmlunit.version>
     </properties>
 
     <!-- ============ DEPENDENCIES ============ -->
@@ -788,7 +788,7 @@
         <connection>${cpp.scm.connection}</connection>
         <developerConnection>${cpp.scm.developerConnection}</developerConnection>
         <url>${cpp.scm.url}</url>
-        <tag>v2.2.0</tag>
+        <tag>v17.103.2</tag>
     </scm>
 
 </project>
