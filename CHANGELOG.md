@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+- Enable gitleaks PR scan
+- Enable repo public visibility
 
 ## [17.104.0-M2] - 2025-07-24
 ### Security
