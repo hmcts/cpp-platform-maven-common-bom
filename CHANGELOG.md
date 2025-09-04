@@ -5,6 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [17.102.2] - 2025-03-28
+### Changed
+- Include netty-bom instead of individual netty library versions.
+
+## [17.102.1] - 2025-03-17
+### Changed
+- Bump version to 17.102.x for next release
+- Update maven-common-bom to 17.102.0 in order to:
+  - Add dependency for commons-codec 1.17.2
+  
+## [17.102.0] - 2025-02-26
+### Changed
+- Removed dependency on commons.codec as the dependency has moved to and is imported from maven-common-bom
+- Commons-codec upgraded to version 1.17.2
+
 ## [17.101.0] - 2025-01-10
 ### Added
 - Add maven-sonar-plugin to pluginManagement (through maven-parent-pom)
