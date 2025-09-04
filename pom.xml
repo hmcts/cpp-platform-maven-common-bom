@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>common-bom</artifactId>
-    <version>17.101.1-SNAPSHOT</version>
+    <version>17.102.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>CPP Common BOM</name>
     <description>Common bill of materials defining standard versions for dependencies</description>
@@ -31,12 +31,11 @@
             File can be found here:
             https://github.com/CJSCommonPlatform/maven-common-bom
         -->
-        <framework-comon-bom.version>17.101.1</framework-comon-bom.version>
+        <framework-comon-bom.version>17.102.0</framework-comon-bom.version>
         <docmosis.repackaging.version>17.10.2</docmosis.repackaging.version>
 
         <weld-ee-version>1.0.0.CR8</weld-ee-version>
         <weld-core-version>1.1.8.Final</weld-core-version>
-        <commons.codec.version>1.6</commons.codec.version>
         <commons.compress.version>1.21</commons.compress.version>
         <commons.csv.version>1.4</commons.csv.version>
         <commons-dbutils.version>1.7</commons-dbutils.version>
@@ -172,6 +171,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- this is controlling all netty dependencies instead of azure-core-http-netty, lettuce-core, etc. -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <version>${netty.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.jboss.arquillian.container</groupId>
                 <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
@@ -271,13 +279,6 @@
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-client</artifactId>
                 <version>${activemq-client.version}</version>
-            </dependency>
-
-            <!-- Apache Commons Codec - http://commons.apache.org/codec/ -->
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>${commons.codec.version}</version>
             </dependency>
 
             <!-- Apache Commons CSV - http://commons.apache.org/csv/ -->
@@ -394,21 +395,7 @@
                 <artifactId>commons-pool2</artifactId>
                 <version>${commons-pool2.version}</version>
             </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-common</artifactId>
-                <version>${netty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-handler</artifactId>
-                <version>${netty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport</artifactId>
-                <version>${netty.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>io.github.lukehutch</groupId>
                 <artifactId>fast-classpath-scanner</artifactId>
