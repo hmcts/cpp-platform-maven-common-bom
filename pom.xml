@@ -5,11 +5,11 @@
     <parent>
         <groupId>uk.gov.moj.cpp.common</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>21.0.0-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
 
     <artifactId>common-bom</artifactId>
-    <version>21.0.0-SNAPSHOT</version>
+    <version>21.0.0-M1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>CPP Common BOM</name>
     <description>Common bill of materials defining standard versions for dependencies</description>
@@ -29,7 +29,7 @@
             Imported here to avoid duplication of library versions.
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>21.0.0-SNAPSHOT</framework-comon-bom.version>
+        <framework-comon-bom.version>21.0.0-M1-SNAPSHOT</framework-comon-bom.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
