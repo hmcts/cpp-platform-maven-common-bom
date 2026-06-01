@@ -9,6 +9,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Enable gitleaks PR scan
 - Enable repo public visibility
+
+## [21.0.0-SNAPSHOT] - 2026-04-20
+### Security
+- Bumped `json-smart.version` from `2.4.9` to `2.5.2` — fixes CVE-2023-1370 (uncontrolled recursion / stack overflow DoS, CVSS 7.5)
+- Bumped `apache.pdfbox.version` from `2.0.24` to `2.0.36` — fixes CVE-2022-27944 (infinite loop DoS on crafted PDF, fixed in 2.0.26) and subsequent 2.x patch CVEs; `pdfbox-tools` and `fontbox` updated in lockstep
+- Bumped `poi.ooxml.version` from `5.2.2` to `5.4.1` — fixes CVE-2025-31672 (uncontrolled resource consumption on crafted Office files, affects < 5.4.0)
+- Bumped `quartz.version` from `2.3.2` to `2.5.0` — fixes CVE-2023-39017 (code injection via JMS job data deserialization, CVSS 9.8)
+
+## [21.0.0-SNAPSHOT] - 2026-04-14
+### Changed
+- Bumped version to `21.0.0-SNAPSHOT` for Java 21 / WildFly 34 migration
+- Updated parent `cpp-platform-maven-parent-pom` to `21.0.0-SNAPSHOT`
+- Updated imported `cp-framework-common-bom` to `21.0.0-SNAPSHOT`
+- Removed obsolete `jboss-javaee-7.0` BOM import (conflicted with Jakarta EE 10)
+- Replaced `javax:javaee-api` managed dependency with `jakarta.platform:jakarta.jakartaee-api:10.0.0`; retained `javax:javaee-api:8.0.1` entry for legacy backward compatibility
+- `weld-core-version`: `1.1.8.Final` → `3.1.9.Final`
+- `guava.version`: `32.1.3-jre` → `33.5.0-jre`
+- `org.everit.json.schema.version`: `1.3.0` → `1.6.0`
+- `mvel2.version`: `2.4.13.Final` → `2.5.2.Final`
+- `jboss.resteasy.version`: `4.3.0.Final` → `6.2.15.Final`
+- Added `com.github.tomakehurst:wiremock:2.35.2` managed dependency (new framework BOM moved to `org.wiremock:wiremock` 3.x; platform projects still use the 2.x groupId)
+
+## [17.104.0-M2] - 2025-07-24
 ### Security
 - Update Commons Fileupload version to **1.6.0** to fix **security vulnerability CVE-2025-48976**
   Detail: https://cwe.mitre.org/data/definitions/770.html
