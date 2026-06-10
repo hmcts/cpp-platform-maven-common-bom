@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [25.104.0-M1] - 2026-06-10
+### Changed
+- Updated parent `cpp-platform-maven-parent-pom` to `25.104.0-M1`
+- Updated imported `cp-maven-common-bom` (`framework-comon-bom.version`) to `25.104.0-M3`
+
 ## [17.104.0] - 2025-12-16
 ### Changed
 - Enable gitleaks PR scan
