@@ -30,6 +30,8 @@
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
         <framework-comon-bom.version>25.104.0-M3</framework-comon-bom.version>
+        <!-- 0.8.12 (parent-pom M1) cannot instrument Java 25 class files (major version 69); override until parent-pom M2 -->
+        <plugins.jacoco.version>0.8.14</plugins.jacoco.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
@@ -78,6 +80,7 @@
 
         <!-- ===== Database / Persistence ===== -->
         <c3p0.version>4.1.6.Final</c3p0.version>
+        <hikari.version>6.2.1</hikari.version>
         <hibernate-types.version>2.20.0</hibernate-types.version>
         <mongodb-driver-version>3.0.2</mongodb-driver-version>
         <quartz.version>2.5.0</quartz.version>
@@ -410,6 +413,11 @@
             </dependency>
 
             <!-- ===== Database / Persistence ===== -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikari.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.vladmihalcea</groupId>
                 <artifactId>hibernate-types-43</artifactId>
