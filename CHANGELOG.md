@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [25.104.0-M2] - 2026-06-18
+### Changed
+- Updated imported `cp-maven-common-bom` (`framework-comon-bom.version`) from `25.104.0-M3` to `25.104.0-M5`
+
 ## [25.104.0-M1] - 2026-06-10
 ### Changed
 - Updated parent `cpp-platform-maven-parent-pom` to `25.104.0-M1`
