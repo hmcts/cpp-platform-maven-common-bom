@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>common-bom</artifactId>
-    <version>17.104.1</version>
+    <version>17.104.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>CPP Common BOM</name>
     <description>Common bill of materials defining standard versions for dependencies</description>
