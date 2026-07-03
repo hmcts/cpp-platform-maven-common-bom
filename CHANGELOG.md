@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+### Changed
+- Bumped json-smart version to **2.4.11** to fix https://github.com/netplex/json-smart-v2/issues/132
 
 ## [17.104.0] - 2025-12-16
 ### Changed

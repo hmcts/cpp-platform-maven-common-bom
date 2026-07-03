@@ -124,7 +124,7 @@
         <jedis-mock.version>0.1.16</jedis-mock.version>
         <joda-time.version>2.10</joda-time.version>
         <json.version>2.12.3</json.version>
-        <json-smart.version>2.4.9</json-smart.version>
+        <json-smart.version>2.4.11</json-smart.version>
         <jsr181-api.version>1.0-MR1</jsr181-api.version>
         <junit-toolbox.version>2.4</junit-toolbox.version>
         <kotlin.version>1.6.0</kotlin.version>
