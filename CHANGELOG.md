@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+### Changed
+- Upgraded Elasticsearch to 9.2.2
 
 ## [17.104.1] - 2025-07-03
 ### Changed
