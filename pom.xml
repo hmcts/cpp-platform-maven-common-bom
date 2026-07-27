@@ -5,7 +5,7 @@
     <parent>
         <groupId>uk.gov.moj.cpp.common</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>25.104.0-M1</version>
+        <version>25.104.0-M2</version>
     </parent>
 
     <artifactId>common-bom</artifactId>
@@ -29,7 +29,7 @@
             Imported here to avoid duplication of library versions.
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>25.104.0-M5</framework-comon-bom.version>
+        <framework-comon-bom.version>25.104.0-M6</framework-comon-bom.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
@@ -95,7 +95,7 @@
         <mvel2.version>2.5.2.Final</mvel2.version>
 
         <!-- ===== Elasticsearch ===== -->
-        <elasticsearch.version>7.17.23</elasticsearch.version>
+        <elasticsearch.version>9.2.2</elasticsearch.version>
 
         <!-- ===== JAXB / XML / Web Services ===== -->
         <istack-commons-runtime>4.0.1</istack-commons-runtime>
@@ -507,8 +507,27 @@
             </dependency>
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <artifactId>elasticsearch-rest-client</artifactId>
                 <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>co.elastic.clients</groupId>
+                <artifactId>elasticsearch-java</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <!-- Align Apache HttpClient 5 core. httpclient5 5.5.x needs httpcore5 5.3.x, but
+                 elasticsearch-rest-client 9.2.2 pins httpcore5 down to 5.2.1, causing
+                 NoSuchMethodError DefaultHttpRequestWriterFactory.<init>(Http1Config) on every
+                 real ES HTTP call. Pin httpcore5 (and its h2 module) to 5.3.x. -->
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5</artifactId>
+                <version>5.3.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5-h2</artifactId>
+                <version>5.3.6</version>
             </dependency>
 
             <!-- ===== JAXB / XML / Web Services ===== -->
