@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [25.104.0-M3] - 2026-07-27
+### Changed
+- **Elasticsearch upgraded `7.17.23` → `9.2.2`** (mirrors Java-17 DD-41592). Removed `org.elasticsearch.client:elasticsearch-rest-high-level-client` (deleted upstream after 7.17); added `org.elasticsearch.client:elasticsearch-rest-client` and `co.elastic.clients:elasticsearch-java` (new 8/9 Java API Client).
+- Bumped imported `cp-maven-common-bom` (`framework-comon-bom.version`) `25.104.0-M5` → `25.104.0-M6` — picks up jackson `2.21.5` security fix (**CVE-2026-54515**) and the `org.junit:junit-bom` import.
+- Bumped parent `parent-pom` `25.104.0-M1` → `25.104.0-M2` — picks up jacoco `0.8.14` (JDK 25 class files), maven-shade `3.6.0`, and the `buildnumber-maven-plugin` warning fix.
+- Pinned `org.apache.httpcomponents.core5:httpcore5` (+ `httpcore5-h2`) to `5.3.6` — `elasticsearch-rest-client:9.2.2` pins `httpcore5` to `5.2.1`, which conflicts with `httpclient5:5.5.x` (needs `5.3.x`) and throws `NoSuchMethodError DefaultHttpRequestWriterFactory.<init>(Http1Config)` on real ES HTTP calls (only surfaces in ITs, not embedded-ES unit tests).
+
 ## [25.104.0-M2] - 2026-06-18
 ### Changed
 - Updated imported `cp-maven-common-bom` (`framework-comon-bom.version`) from `25.104.0-M3` to `25.104.0-M5`
