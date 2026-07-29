@@ -95,7 +95,7 @@
         <mvel2.version>2.5.2.Final</mvel2.version>
 
         <!-- ===== Elasticsearch ===== -->
-        <elasticsearch.version>9.2.2</elasticsearch.version>
+        <elasticsearch.version>9.3.3</elasticsearch.version>
 
         <!-- ===== JAXB / XML / Web Services ===== -->
         <istack-commons-runtime>4.0.1</istack-commons-runtime>
@@ -516,7 +516,7 @@
                 <version>${elasticsearch.version}</version>
             </dependency>
             <!-- Align Apache HttpClient 5 core. httpclient5 5.5.x needs httpcore5 5.3.x, but
-                 elasticsearch-rest-client 9.2.2 pins httpcore5 down to 5.2.1, causing
+                 elasticsearch-rest-client 9.3.3 pins httpcore5 down to 5.2.1, causing
                  NoSuchMethodError DefaultHttpRequestWriterFactory.<init>(Http1Config) on every
                  real ES HTTP call. Pin httpcore5 (and its h2 module) to 5.3.x. -->
             <dependency>
