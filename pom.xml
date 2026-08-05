@@ -29,7 +29,7 @@
             Imported here to avoid duplication of library versions.
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>25.104.0-M6</framework-comon-bom.version>
+        <framework-comon-bom.version>25.104.0-M7</framework-comon-bom.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
