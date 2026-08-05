@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+
+## [25.104.0-M5] - 2026-08-05
 ### Changed
 - Bumped `framework-comon-bom.version` (cp-maven-common-bom) to `25.104.0-M7` — picks up the Apache Artemis client bump `2.53.0` → `2.54.0`.
 - **Elasticsearch `9.2.2` → `9.3.3`** — aligns the managed ES client (`elasticsearch-rest-client` / `elasticsearch-java`) with the `9.3.3` image and `elasticsearch-eck` chart already in ACR (dev/validation ES). Patch/minor within ES 9.x and API-compatible — no source changes needed across `cpp-platform-libraries` or the ES contexts, and the full ES-context IT suites pass against a 9.3.3 client + 9.3.3 server. `httpcore5` (+ `httpcore5-h2`) stays pinned `5.3.6`.
