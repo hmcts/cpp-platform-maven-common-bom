@@ -5,26 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## [25.104.0-M5] - 2026-08-05
-### Changed
-- Bumped `framework-comon-bom.version` (cp-maven-common-bom) to `25.104.0-M7` — picks up the Apache Artemis client bump `2.53.0` → `2.54.0`.
-- **Elasticsearch `9.2.2` → `9.3.3`** — aligns the managed ES client (`elasticsearch-rest-client` / `elasticsearch-java`) with the `9.3.3` image and `elasticsearch-eck` chart already in ACR (dev/validation ES). Patch/minor within ES 9.x and API-compatible — no source changes needed across `cpp-platform-libraries` or the ES contexts, and the full ES-context IT suites pass against a 9.3.3 client + 9.3.3 server. `httpcore5` (+ `httpcore5-h2`) stays pinned `5.3.6`.
+## [25.104.0] - 2026-09-08
+First official (non-milestone) release of the Java 25 / WildFly 40 / Jakarta EE 11 line,
+consolidating milestones `25.104.0-M1` to `25.104.0-M5`.
 
-## [25.104.0-M3] - 2026-07-27
 ### Changed
-- **Elasticsearch upgraded `7.17.23` → `9.2.2`** (mirrors Java-17 DD-41592). Removed `org.elasticsearch.client:elasticsearch-rest-high-level-client` (deleted upstream after 7.17); added `org.elasticsearch.client:elasticsearch-rest-client` and `co.elastic.clients:elasticsearch-java` (new 8/9 Java API Client).
-- Bumped imported `cp-maven-common-bom` (`framework-comon-bom.version`) `25.104.0-M5` → `25.104.0-M6` — picks up jackson `2.21.5` security fix (**CVE-2026-54515**) and the `org.junit:junit-bom` import.
-- Bumped parent `parent-pom` `25.104.0-M1` → `25.104.0-M2` — picks up jacoco `0.8.14` (JDK 25 class files), maven-shade `3.6.0`, and the `buildnumber-maven-plugin` warning fix.
-- Pinned `org.apache.httpcomponents.core5:httpcore5` (+ `httpcore5-h2`) to `5.3.6` — `elasticsearch-rest-client:9.2.2` pins `httpcore5` to `5.2.1`, which conflicts with `httpclient5:5.5.x` (needs `5.3.x`) and throws `NoSuchMethodError DefaultHttpRequestWriterFactory.<init>(Http1Config)` on real ES HTTP calls (only surfaces in ITs, not embedded-ES unit tests).
-
-## [25.104.0-M2] - 2026-06-18
-### Changed
-- Updated imported `cp-maven-common-bom` (`framework-comon-bom.version`) from `25.104.0-M3` to `25.104.0-M5`
-
-## [25.104.0-M1] - 2026-06-10
-### Changed
-- Updated parent `cpp-platform-maven-parent-pom` to `25.104.0-M1`
-- Updated imported `cp-maven-common-bom` (`framework-comon-bom.version`) to `25.104.0-M3`
+- Updated parent `cpp-platform-maven-parent-pom` (`parent-pom`) to the released `25.104.0` — Java 25 compiler source/target/release, `enforcer.java.version.range=[25,)`, Jakarta EE 11 properties, jacoco `0.8.14` (JDK 25 class files), maven-shade `3.6.0`, and the `buildnumber-maven-plugin` warning fix
+- Updated the imported `cp-maven-common-bom` (`framework-comon-bom.version`) to the released `25.104.0` — Jakarta EE 11 API set, WildFly `40.0.0.Final`, Weld 6, RESTEasy 7, Hibernate ORM 6, Apache Artemis `2.54.0` under the new `org.apache.artemis` groupId, Jackson `2.21.5` (**CVE-2026-54515**) and the `org.junit:junit-bom` import
+- **Elasticsearch upgraded `7.17.23` → `9.3.3`** (mirrors Java-17 DD-41592). Removed `org.elasticsearch.client:elasticsearch-rest-high-level-client` (deleted upstream after 7.17); added `org.elasticsearch.client:elasticsearch-rest-client` and `co.elastic.clients:elasticsearch-java` (the new 8/9 Java API Client). The final `9.3.3` aligns the managed client with the `9.3.3` image and `elasticsearch-eck` chart already in ACR for dev/validation ES; it is API-compatible, so no source changes were needed across `cpp-platform-libraries` or the ES contexts, and the full ES-context IT suites pass against a `9.3.3` client and server
+- Pinned `org.apache.httpcomponents.core5:httpcore5` (+ `httpcore5-h2`) to `5.3.6` — `elasticsearch-rest-client` pins `httpcore5` to `5.2.1`, which conflicts with `httpclient5:5.5.x` (needs `5.3.x`) and throws `NoSuchMethodError DefaultHttpRequestWriterFactory.<init>(Http1Config)` on real ES HTTP calls (this only surfaces in ITs, not in embedded-ES unit tests)
 
 ## [17.104.0] - 2025-12-16
 ### Changed
