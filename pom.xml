@@ -5,7 +5,7 @@
     <parent>
         <groupId>uk.gov.moj.cpp.common</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>25.104.0</version>
+        <version>25.104.2</version>
     </parent>
 
     <artifactId>common-bom</artifactId>
@@ -29,7 +29,7 @@
             Imported here to avoid duplication of library versions.
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>25.104.0</framework-comon-bom.version>
+        <framework-comon-bom.version>25.104.1</framework-comon-bom.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
