@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file, which follo
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [25.104.2] - 2026-09-15
+### Changed
+- Updated the parent `parent-pom` to 25.104.4, which ships `liquibase-postgres-compatibility` in the `liquibase-jar` profile (versioned from `framework-libraries-bom`) and adds the Shade `ServicesResourceTransformer` so the merged `META-INF/services` registrations survive shading.
+
 ## [25.104.1] - 2026-09-11
 ### Changed
 - Updated the parent `parent-pom` to 25.104.2 to take the changes from it
