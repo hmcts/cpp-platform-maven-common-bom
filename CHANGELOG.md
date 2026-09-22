@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [17.104.2] - 2026-09-22
+### Changed
+- Upgraded Elasticsearch to 9.2.2
+
 ## [17.104.1] - 2025-07-03
 ### Changed
 - Bumped json-smart version to **2.4.11** to fix https://github.com/netplex/json-smart-v2/issues/132
