@@ -3,6 +3,25 @@ All notable changes to this project will be documented in this file, which follo
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Security
+- `netty-bom` 4.1.119.Final → 4.1.138.Final: 61 advisories including critical CVE-2026-75595 (SNI routing bypass)
+- `httpcore5` / `httpcore5-h2` 5.3.6 → 5.4.4: CVE-2026-54399, CVE-2026-54428 (no fix on 5.3.x)
+- Added `httpclient5` 5.6.4, the line built against httpcore5 5.4.x and the one `elasticsearch-rest5-client` 9.3.3 declares
+- `azure-storage-blob` 12.27.0-beta.1 → 12.27.1 (GA), with `azure-core` 1.49.1 → 1.53.0 (blob 12.27.1 is built against azure-core 1.51.0)
+
+### Removed
+- Unused entries with known CVEs: `activemq-client` 5.16.8, `cxf-rt-frontend-jaxws` / `cxf-rt-transports-http-jetty` 3.4.4, `mongodb-driver` 3.0.2
+
+### Changed
+- Brought managed versions up to what the Java 25 contexts already pin, so those pins can be deleted:
+  `lombok` 1.18.26 → 1.18.40 (1.18.26 fails on JDK 25), `jaxb-runtime` 2.3.1 → 4.0.6 (matches the jaxb-core/xjc 4.0.6
+  already on Java 25 classpaths), `camunda` 7.17.0 → 7.24.0 (now also imported as `camunda-bom`), `aspectjrt` 1.7.3 → 1.9.6,
+  `azure-identity` 1.13.0 → 1.14.0, `azure-functions-java-library` 3.1.0 → 3.3.0, `commons-compress` 1.26.0 → 1.27.1,
+  `gson` 2.8.9 → 2.10.1, `greenmail` 1.6.5 → 2.1.0, `joda-time` 2.10 → 2.10.10
+- Added entries for libraries contexts pin today: `mapstruct` / `mapstruct-processor` 1.6.3, `lombok-mapstruct-binding` 0.2.0,
+  `HikariCP` 6.2.1, `aspectjweaver` 1.9.6, `poi` 5.4.1, `jsoup` 1.21.2
+
 ## [25.104.2] - 2026-09-15
 ### Changed
 - Updated the parent `parent-pom` to 25.104.4, which ships `liquibase-postgres-compatibility` in the `liquibase-jar` profile (versioned from `framework-libraries-bom`) and adds the Shade `ServicesResourceTransformer` so the merged `META-INF/services` registrations survive shading.
