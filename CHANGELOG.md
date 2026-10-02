@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [25.104.4] - 2026-10-02
+### Changed
+- Updated the parent `parent-pom` to 25.104.5
+
+### Removed
+- This project's `.ci-hooks/fixup-versions` script. It edited a `cpp.common-bom.version` property that this pom does not declare, so every release ran `xmlstarlet` against a node that was not there. It has never had any effect. The hook machinery in `parent-pom` is unchanged and still used by `cpp-platform-libraries`.
+
 ## [25.104.3] - 2026-09-25
 ### Security
 - Updated the imported `cp-maven-common-bom` (`framework-comon-bom.version`) to 25.104.2: postgresql 42.7.13
