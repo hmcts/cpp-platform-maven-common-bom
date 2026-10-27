@@ -29,7 +29,7 @@
             Imported here to avoid duplication of library versions.
             File can be found here: https://github.com/hmcts/cp-maven-common-bom
         -->
-        <framework-comon-bom.version>25.104.2</framework-comon-bom.version>
+        <framework-comon-bom.version>25.104.3</framework-comon-bom.version>
 
         <!-- ===== Activiti ===== -->
         <activiti.version>5.22.0</activiti.version>
@@ -133,7 +133,7 @@
         <netty.version>4.1.138.Final</netty.version>
 
         <!-- ===== HTML parsing ===== -->
-        <jsoup.version>1.21.2</jsoup.version>
+        <jsoup.version>1.23.2</jsoup.version>
 
         <!-- ===== Utilities ===== -->
         <camel.version>2.16.1</camel.version>
