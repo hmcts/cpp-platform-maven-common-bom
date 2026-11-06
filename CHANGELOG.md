@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [25.104.6] - 2026-11-06
+### Changed
+- Updated the imported `cp-maven-common-bom` (`framework-comon-bom.version`) to 25.104.4: Hibernate ORM 6.6.1.Final →
+  7.3.2.Final, the version WildFly 40.0.1 ships
+
 ## [25.104.5] - 2026-10-28
 ### Security
 - Updated the imported `cp-maven-common-bom` (`framework-comon-bom.version`) to 25.104.3: jackson 2.21.5 → 2.21.8
