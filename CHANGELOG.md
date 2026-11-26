@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file, which follo
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Security
+- Updated the imported `cp-maven-common-bom` (`framework-comon-bom.version`) to 25.104.5: guava 33.5.0-jre →
+  33.8.0-jre ([CVE-2026-102554](https://www.cve.org/CVERecord?id=CVE-2026-102554)) and org.json 20251224 → 20260814
+  ([CVE-2026-59171](https://www.cve.org/CVERecord?id=CVE-2026-59171))
+
+### Changed
+- Updated the parent `cpp-platform-maven-parent-pom` to 25.104.6, which manages the Jakarta
+  `com.sun.xml.ws:jaxws-maven-plugin` 4.0.5 ([PEG-3749](https://hmcts.atlassian.net/browse/PEG-3749))
+- Updated the imported `cp-maven-common-bom` to 25.104.5, which also moves `com.sun.xml.bind:jaxb-impl` and `jaxb-core`
+  to the Jakarta 4.0.6 ([PEG-3749](https://hmcts.atlassian.net/browse/PEG-3749))
+- `saaj-impl` 1.3.15 → 3.0.6: the managed 1.3.15 (javax SAAJ) overrode the Jakarta SAAJ that CXF 4 brings, so it was
+  bundled in every WAR using CXF and broke wss4j SOAP signing/encryption in staging-enforcement
+  ([CHD-3420](https://hmcts.atlassian.net/browse/CHD-3420), [PEG-3749](https://hmcts.atlassian.net/browse/PEG-3749))
+- `jaxws-rt` 2.3.4 → 4.0.5 and `streambuffer` 2.0.2 → 2.1.0, and `jakarta.xml.ws-api` 4.0.3 is now managed: the
+  Jakarta XML Web Services 4 stack WildFly 40 needs, in place of the javax one
+  ([PEG-3749](https://hmcts.atlassian.net/browse/PEG-3749))
 
 ## [25.104.6] - 2026-11-06
 ### Changed
